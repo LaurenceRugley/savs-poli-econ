@@ -1,65 +1,144 @@
 import { Word } from '@/components/Word';
 import { Quiz } from '@/components/Quiz';
 import { AskLaurence } from '@/components/AskLaurence';
+import { DropCap, Chapter, Pull, Coda, GradientRule } from '@/components/Editorial';
+import { SwipeCards } from '@/components/SwipeCards';
+import { Capitol, ThreeBranches, Gavel, Ballot, FederalState } from '@/components/Illustrations';
 
-# Part Two — How Our Government Works
+<p className="sans text-xs uppercase tracking-[0.35em] text-gold mb-3">part two</p>
 
-The U.S. government is set up so that no single person or group has all the power. The people who wrote the Constitution were worried about kings and dictators, so they split the government into three parts — called **branches** — and made each one able to push back on the others. That's what people mean by <Word definition="The design where each branch of government has powers that limit the others — so no one branch can grab everything.">checks and balances</Word>.
+# How Our Government Works
 
-## The three branches, at a glance
+<p className="dot-rule sans text-xs uppercase tracking-[0.3em] text-gold/80 my-6">the design</p>
 
-### Branch 1: The Legislative Branch (Congress)
+<div className="my-6 flex justify-center text-ink/80">
+  <Capitol size={180} />
+</div>
 
-**Job:** Make the laws.
+<DropCap>The U.S. government is set up so that no single person or group has all the power. The people who wrote the Constitution were worried about kings and dictators, so they split the government into three parts — called branches — and made each one able to push back on the others. That's what people mean by checks and balances.</DropCap>
 
-Congress is split into two halves, and a bill has to pass both before it can become a law:
+<div className="my-10 flex justify-center text-ink/80">
+  <ThreeBranches size={260} />
+</div>
 
-- **The House of Representatives** — 435 people. How many each state gets depends on population, so California has a lot and Wyoming has very few. They serve **2-year terms**.
-- **The Senate** — 100 people. Every state gets exactly 2, no matter how big or small. They serve **6-year terms**.
+<GradientRule />
 
-Congress also controls the money — they decide what the government spends on schools, the military, roads, everything. That's called <Word definition="Congress controls how much money the government can spend and on what. Nothing else moves without it.">"the power of the purse"</Word>, and it's one of the biggest powers in Washington.
+<Chapter n="I" title="Congress · makes the laws" />
 
-### Branch 2: The Executive Branch (The President)
+The <Word emoji="🏛" definition="The lawmaking branch. Two halves — House of Representatives (435 seats, by population) and Senate (100 seats, 2 per state). Both have to pass a bill before it becomes a law.">**Legislative Branch**</Word> is split into two halves, and a bill has to pass both before it can become a law:
 
-**Job:** Run the country day-to-day and enforce the laws Congress passes.
+- **The House of Representatives** — 435 people. How many each state gets depends on population, so California has a lot and Wyoming has very few. **2-year terms.**
+- **The Senate** — 100 people. Every state gets exactly 2, no matter how big or small. **6-year terms.**
+
+Congress also controls the money — they decide what the government spends on schools, the military, roads, everything. That's called <Word emoji="💰" definition="Congress controls how much money the government can spend and on what. Nothing else moves without it.">"the power of the purse"</Word>, and it's one of the biggest powers in Washington.
+
+<Pull attribution="Why each state gets two senators">
+  The Senate gives every state equal weight regardless of population. That's by design — small states wouldn't have agreed otherwise.
+</Pull>
+
+<GradientRule tone="terracotta" />
+
+<Chapter n="II" title="The President · runs the country" />
+
+<div className="my-6 flex justify-center text-ink/80">
+  <Capitol size={150} />
+</div>
+
+The <Word emoji="🏢" definition="The President plus the Cabinet plus all the federal agencies. Job: enforce the laws Congress passes and run the country day-to-day.">**Executive Branch**</Word>'s job is to run the country day-to-day and enforce the laws Congress passes.
 
 The President is elected every 4 years and can serve a maximum of **two terms**. The Vice President is the backup. Underneath them are the big departments — State (foreign affairs), Defense (military), Treasury (money), Justice (law enforcement), and a bunch more. The heads of those are called the **Cabinet**.
 
-The President can also <Word definition="A presidential 'no' on a bill — blocks it from becoming law unless Congress overrides with a 2/3 vote.">veto</Word> bills from Congress, command the military, and make deals with other countries — though Congress has to approve the big stuff.
+The President can also <Word emoji="🛑" definition="A presidential 'no' on a bill — blocks it from becoming law unless Congress overrides with a 2/3 vote.">veto</Word> bills from Congress, command the military, and make deals with other countries — though Congress has to approve the big stuff.
 
-### Branch 3: The Judicial Branch (The Courts)
+<GradientRule tone="sage" />
 
-**Job:** Decide what the laws actually mean when there's a disagreement.
+<Chapter n="III" title="The Courts · decide what it means" />
 
-At the top is the **Supreme Court** — 9 judges (called **Justices**) who serve for life. When a law is unclear, or someone argues a law is unconstitutional, cases work their way up through lower courts until the Supreme Court has the final word.
+<div className="my-6 flex justify-center text-ink/80">
+  <Gavel size={170} />
+</div>
 
-The Supreme Court is powerful because it can strike down laws Congress passes and actions the President takes if they violate the Constitution.
+The <Word emoji="⚖️" definition="The courts — Supreme Court at the top, plus federal appeals and district courts. Job: decide what laws mean when there's a disagreement and strike down anything that violates the Constitution.">**Judicial Branch**</Word>'s job is to decide what the laws actually mean when there's a disagreement.
 
-## How they check each other
+At the top is the **Supreme Court** — 9 judges (called **Justices**) who serve **for life**. When a law is unclear, or someone argues a law is unconstitutional, cases work their way up through lower courts until the Supreme Court has the final word.
 
-This is the part that makes the whole thing work:
+The Supreme Court is powerful because it can strike down laws Congress passes and actions the President takes if they violate the Constitution. That power is called **judicial review** — and weirdly, it's not even in the Constitution. The Court claimed it for itself in 1803 (a case called *Marbury v. Madison*).
 
-- Congress writes laws, but the President can **veto** them.
-- If the President vetoes, Congress can **override** with a 2/3 vote.
-- The President picks Supreme Court Justices, but the **Senate has to approve** them.
-- The Supreme Court can rule that a law from Congress or an action from the President is **unconstitutional** — meaning it doesn't count.
-- Congress can <Word definition="The formal process to remove a President or other high officer for serious misconduct. Charges in the House, trial in the Senate.">impeach</Word> a President or a Justice if they break the law badly enough.
+<GradientRule />
 
-**Nobody gets to run away with the whole show. That's the design.**
+<div className="my-12 md:my-16 text-center md:-mx-10 lg:-mx-20">
+  <h2 className="serif text-display-md text-ink mt-0 mb-4">How they check each other</h2>
+  <p className="prose-savs max-w-prose mx-auto !mb-0">This is the part that makes the whole thing work. Nobody gets to run away with the whole show.</p>
+</div>
 
-## Federal vs. State
+<SwipeCards
+  title="The push-back, one card at a time"
+  cards={[
+    {
+      label: 'congress → president',
+      title: 'Override the veto',
+      body: "If the President vetoes a bill, Congress can override with a 2/3 vote in both chambers.",
+      emoji: '↩️',
+      tone: 'gold',
+    },
+    {
+      label: 'president → congress',
+      title: 'Veto',
+      body: "The President can refuse to sign a bill. It dies unless Congress musters that 2/3.",
+      emoji: '🛑',
+      tone: 'terracotta',
+    },
+    {
+      label: 'congress → court',
+      title: 'Confirm justices',
+      body: "The President picks Supreme Court Justices, but the Senate has to approve them.",
+      emoji: '🤝',
+      tone: 'sage',
+    },
+    {
+      label: 'court → both',
+      title: 'Strike it down',
+      body: "The Supreme Court can rule a law or executive action unconstitutional — meaning it doesn't count.",
+      emoji: '⚖️',
+      tone: 'cream',
+    },
+    {
+      label: 'congress → both',
+      title: 'Impeach',
+      body: "Congress can impeach and remove a President or a Justice for serious misconduct.",
+      emoji: '📜',
+      tone: 'ink',
+    },
+  ]}
+/>
 
-On top of all this, there are two levels of government:
+<Pull>Nobody gets to run away with the whole show. That's the design.</Pull>
 
-- **Federal** — handles things that affect the whole country: military, currency, interstate commerce, immigration, treaties.
-- **State** — handles most of daily life: schools, roads, marriage, traffic laws, **cosmetology licensing**, criminal codes, property rules.
+<GradientRule />
 
-> Heads-up: cosmetology licensing is run by the **California Board of Barbering and Cosmetology** — a state agency, not federal.
+<Chapter n="IV" title="Federal vs. State" />
+
+<div className="my-6 flex justify-center text-ink/80">
+  <FederalState size={260} />
+</div>
+
+On top of all this, there are **two levels of government**:
+
+- **Federal** — things that affect the whole country: military, currency, interstate commerce, immigration, treaties.
+- **State** — most of daily life: schools, roads, marriage, traffic laws, criminal codes, property rules.
+
+> Heads-up: <Word emoji="💇‍♀️" definition="The California Board of Barbering and Cosmetology — a state agency. Hair / nails / esthetics licensing is state-level, not federal.">cosmetology licensing</Word> is run by the **California Board of Barbering and Cosmetology** — a state agency, not federal. Most things you actually deal with as a small-business owner are state-level.
 
 Some things, like **taxes**, you pay to both.
 
+<GradientRule tone="terracotta" />
+
+<div className="my-12 text-center text-ink/80 flex justify-center">
+  <Ballot size={160} />
+</div>
+
 <Quiz
-  title="Test what you remember"
+  title="Want to test it?"
   questions={[
     {
       question: "Why does Wyoming get exactly 2 senators just like California?",
@@ -86,6 +165,10 @@ Some things, like **taxes**, you pay to both.
   ]}
 />
 
-That's the foundation. None of this is everything — whole books are written about each section — but if you understand this much, you can follow most political news without feeling lost. And anytime something comes up you want to dig into, ask me. — L
+<Coda>
+  That's the foundation. Whole books are written about each section, but if you understand this much, you can follow most political news without feeling lost.
+</Coda>
 
-<AskLaurence topic="how our government works" />
+<div className="text-center my-8">
+  <AskLaurence topic="how our government works" />
+</div>

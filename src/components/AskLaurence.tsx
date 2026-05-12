@@ -1,3 +1,5 @@
+// A quiet inline "ask me anything" link — not a sticky bubble.
+// Replaces the previous footer button. Lives at the bottom of sections.
 export function AskLaurence({ topic }: { topic?: string }) {
   const body = topic
     ? `Hey L — quick question about ${topic} from the refresher.`
@@ -6,9 +8,11 @@ export function AskLaurence({ topic }: { topic?: string }) {
   return (
     <a
       href={href}
-      className="inline-block mt-4 px-4 py-2 bg-ink text-limestone hover:bg-gold transition-colors rounded text-sm sans no-underline"
+      className="arrow-link inline-flex items-center gap-2 sans text-sm tracking-[0.05em] text-ink/70 hover:text-ink no-underline"
     >
-      Ask Laurence about this
+      <span className="serif italic text-gold text-lg">— L</span>
+      <span>text me about this</span>
+      <span className="arrow">→</span>
     </a>
   );
 }

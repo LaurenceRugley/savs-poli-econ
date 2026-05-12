@@ -8,38 +8,51 @@
   --gold-light: 212 188 147;
   --limestone: 250 247 242;
   --limestone-dark: 239 233 222;
+  --terracotta: 198 142 110;
+  --sage: 138 160 138;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
   background: rgb(var(--limestone));
   color: rgb(var(--ink));
-  font-feature-settings: 'kern','liga','calt';
+  font-feature-settings: 'kern','liga','calt','ss01';
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
+
+::selection { background: rgb(var(--gold) / 0.35); }
 
 .serif { font-family: 'Cormorant Garamond', Georgia, serif; }
 .sans  { font-family: 'Inter', system-ui, sans-serif; }
 
+/* Hide scrollbars inside swipe rails */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+/* Long-form prose */
 .prose-savs {
   font-family: 'Inter', system-ui, sans-serif;
   font-size: 1.0625rem;
   line-height: 1.8;
   color: rgb(var(--ink));
 }
-
 .prose-savs p { margin-bottom: 1.25rem; }
-.prose-savs strong { font-weight: 600; }
+.prose-savs strong { font-weight: 600; color: rgb(var(--ink)); }
 .prose-savs em { font-style: italic; }
 .prose-savs h2 {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 2.25rem;
-  line-height: 1.2;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.15;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
-  color: rgb(var(--ink));
+  letter-spacing: -0.01em;
 }
 .prose-savs h3 {
   font-family: 'Cormorant Garamond', Georgia, serif;
@@ -47,18 +60,83 @@ body {
   font-style: italic;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-  color: rgb(var(--ink));
 }
 
-.callout {
+/* Hairline gold underline that draws in on hover */
+.prose-savs a {
+  position: relative;
+  color: rgb(var(--ink));
+  text-decoration: none;
+  background-image: linear-gradient(rgb(var(--gold)), rgb(var(--gold)));
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 calc(100% - 2px);
+  transition: background-size 0.3s ease;
+}
+.prose-savs a:hover { background-size: 100% 1px; }
+
+/* Soft callout for blockquote -> looks like an editorial aside */
+.prose-savs blockquote {
   border-left: 3px solid rgb(var(--gold));
   background: rgb(var(--limestone-dark));
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
   border-radius: 0.25rem;
+  font-style: italic;
+  color: rgb(var(--ink) / 0.85);
+}
+.prose-savs blockquote p { margin-bottom: 0; }
+
+/* Soft dotted underline on tappable jargon words */
+.word-tip {
+  background-image: linear-gradient(rgb(var(--gold)), rgb(var(--gold)));
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: color 0.15s ease;
+}
+.word-tip:hover { color: rgb(var(--gold)); }
+
+/* Link arrow that slides on hover */
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: gap 0.2s ease;
+}
+.arrow-link:hover { gap: 0.7rem; }
+.arrow-link .arrow { transition: transform 0.2s ease; }
+.arrow-link:hover .arrow { transform: translateX(2px); }
+
+/* Card hover lift */
+.card-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.card-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -12px rgb(var(--ink) / 0.22);
+  border-color: rgb(var(--gold));
 }
 
-.word-tip {
-  border-bottom: 1px dotted rgb(var(--gold));
-  cursor: help;
+/* Duotone image utility */
+.duotone {
+  filter: grayscale(100%) contrast(1.1);
+  mix-blend-mode: multiply;
+}
+.duotone-frame {
+  background: rgb(var(--gold) / 0.95);
+  overflow: hidden;
+}
+.duotone-frame > img { opacity: 0.85; }
+
+/* Section ornament — small dot rule */
+.dot-rule::before,
+.dot-rule::after {
+  content: '';
+  display: inline-block;
+  height: 1px;
+  width: 2.5rem;
+  background: rgb(var(--gold-light));
+  vertical-align: middle;
+  margin: 0 0.75rem;
 }

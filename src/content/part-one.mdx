@@ -1,34 +1,59 @@
 import { Word } from '@/components/Word';
 import { Quiz } from '@/components/Quiz';
 import { AskLaurence } from '@/components/AskLaurence';
+import { DropCap, Chapter, Pull, Coda, GradientRule } from '@/components/Editorial';
+import { SwipeCards } from '@/components/SwipeCards';
+import { SalonChair, ThreeChairs, TipJar, OpenBook } from '@/components/Illustrations';
 
-# Part One — Three Economic Systems
+<p className="sans text-xs uppercase tracking-[0.35em] text-gold mb-3">part one</p>
+
+# Three Economic Systems
+
+<p className="dot-rule sans text-xs uppercase tracking-[0.3em] text-gold/80 my-6">the big three</p>
 
 Every country has to answer three basic questions:
 
-- **Who owns the stuff that makes other stuff?** (factories, land, businesses)
+- **Who owns the stuff that makes other stuff?** (factories, land, salons, businesses)
 - **Who decides what gets made?**
 - **How is the money split up?**
 
-The three big systems people argue about — **capitalism**, **socialism**, and **communism** — are different answers to those questions.
+The three big systems people argue about — **capitalism**, **socialism**, and **communism** — are different answers to those three questions. They're not three points on a line. They're three takes on the same handful of choices.
 
-## Capitalism
+<GradientRule />
 
-In capitalism, regular people and private companies own the businesses, the land, and the tools that produce things. If you open a salon, the chairs, the products, and the profits are yours. Prices and wages are mostly set by what people are willing to pay and what workers are willing to accept — that's what people mean when they say *"the market."*
+<Chapter n="I" title="Capitalism" />
+
+<div className="my-6 flex justify-center text-ink/80">
+  <SalonChair size={180} />
+</div>
+
+<DropCap>In capitalism, regular people and private companies own the businesses, the land, and the tools that produce things. If you open a salon, the chairs, the products, and the profits are yours. Prices and wages are mostly set by what people are willing to pay and what workers are willing to accept — that's what people mean when they say "the market."</DropCap>
 
 **The upside:** people are free to start things, take risks, and keep what they earn. That tends to drive innovation — new businesses, new products, new ideas.
 
 **The downside:** it can create big gaps between rich and poor, and the market doesn't automatically take care of things like healthcare, clean air, or people who can't work.
 
-**Example:** The United States is mostly capitalist. Your salon, our business, Amazon, the corner taco truck — all privately owned.
+<Pull attribution="Capitalism, in a sentence">
+  You buy the chairs. You set the prices. The clients pay you. What's left after rent is yours to keep or reinvest.
+</Pull>
 
-## Socialism
+The United States is mostly capitalist. Your salon, our business, Amazon, the corner taco truck — all privately owned.
 
-<Word definition="Big umbrella word — covers everything from Nordic welfare states with private companies and billionaires, all the way to fully state-owned economies. Most arguments confuse these.">Socialism</Word> is a big umbrella. The basic idea is that some important things shouldn't be left purely to private owners and the market — the public should own them, or the government should make sure everyone has access. There's a soft version and a hard version.
+<GradientRule tone="terracotta" />
+
+<Chapter n="II" title="Socialism" />
+
+<div className="my-6 flex justify-center text-ink/80">
+  <TipJar size={170} />
+</div>
+
+<DropCap>Socialism is a big umbrella. The basic idea is that some important things shouldn't be left purely to private owners and the market — the public should own them, or the government should make sure everyone has access. There's a soft version and a hard version, and most arguments online are people using one word for both.</DropCap>
 
 ### The soft version
 
-Sometimes called **democratic socialism**. It keeps capitalism but adds a strong safety net: free healthcare, free college, generous parental leave, strong worker protections. Companies are still private; the government just taxes more and provides more. Think **Norway, Denmark, Sweden** — they still have billionaires and Starbucks.
+Sometimes called <Word emoji="🌿" definition="A version of socialism that keeps private companies and markets but uses high taxes to fund a strong safety net — healthcare, parental leave, education, worker protections.">democratic socialism</Word>. It keeps capitalism but adds a strong safety net: free healthcare, free college, generous parental leave, strong worker protections. Companies are still private; the government just taxes more and provides more.
+
+> Think **Norway, Denmark, Sweden**. They still have billionaires and Starbucks.
 
 ### The hard version
 
@@ -37,31 +62,84 @@ The government (or workers collectively) actually owns the major industries — 
 **The upside:** less inequality, more shared services.
 **The downside:** higher taxes, and when the government runs too much, things can get slow, inefficient, or politically controlled.
 
-## Communism
+<GradientRule tone="sage" />
 
-Communism is the most extreme version. **In theory**, it's an end-goal society with no private ownership at all, no rich-and-poor classes, and no government needed because everyone shares everything based on need. That's the dream version a writer named <Word definition="German philosopher and economist, 1818–1883. Wrote 'The Communist Manifesto' (1848) and 'Das Kapital' (1867). Almost every socialist and communist movement traces back to him.">Karl Marx</Word> described in the 1800s.
+<Chapter n="III" title="Communism" />
 
-**In practice**, every country that's tried it — the old Soviet Union, China under Mao, Cuba, North Korea — ended up with the opposite of "no government": one ruling party that controlled basically everything, including what you could say or where you could work.
+<div className="my-6 flex justify-center text-ink/80">
+  <OpenBook size={170} />
+</div>
 
-**The takeaway:** "communism" in theory and "communism" in practice are very different things, and a lot of arguments online happen because people are using the same word for both.
+<DropCap>Communism is the most extreme version. There's a theory of it, and there's the practice of it. Almost every argument you'll hear online is people swapping the two.</DropCap>
 
-## Where did these ideas come from?
+### In theory
 
-Two books, both by **Karl Marx** (with his friend **Friedrich Engels**):
+An end-goal society with no private ownership at all, no rich-and-poor classes, and no government needed because everyone shares everything based on need. That's the dream version a writer named <Word emoji="📖" definition="German philosopher and economist, 1818–1883. Wrote 'The Communist Manifesto' (1848) and 'Das Kapital' (1867). Almost every socialist and communist movement traces back to him.">Karl Marx</Word> described in the 1800s.
+
+### In practice
+
+Every country that's tried it — the old Soviet Union, China under Mao, Cuba, North Korea — ended up with the opposite of "no government": **one ruling party that controlled basically everything**, including what you could say or where you could work.
+
+<Pull attribution="The whole confusion in one sentence">
+  "Communism" in theory and "communism" in practice are very different things — and most online fights are people using the same word for both.
+</Pull>
+
+<GradientRule />
+
+<div className="my-12 md:my-16 text-center md:-mx-10 lg:-mx-20">
+  <h2 className="serif text-display-md text-ink mt-0 mb-3">Where did these ideas come from?</h2>
+  <div className="flex justify-center mb-5 text-ink/80">
+    <OpenBook size={140} />
+  </div>
+  <p className="prose-savs max-w-prose mx-auto">Two books, both by Karl Marx (with his friend Friedrich Engels). Almost every socialist and communist movement since then traces back to these two.</p>
+</div>
 
 - ***The Communist Manifesto*** (1848) — a short, fiery pamphlet. The famous closing line is *"Workers of the world, unite!"*
 - ***Das Kapital*** (1867) — a much longer, denser book analyzing how capitalism works and what Marx thought was wrong with it.
 
-Almost every socialist and communist movement since then traces back to these two books.
-
-## Quick cheat sheet
-
-- **Capitalism** — private people own businesses; markets decide prices.
-- **Socialism** — public ownership or strong government services; aims to reduce inequality.
-- **Communism** — in theory, no classes or private property; in practice, one-party state control.
+<SwipeCards
+  title="The three big ones — at a glance"
+  cards={[
+    {
+      label: '01',
+      title: 'Capitalism',
+      body: "Private people own businesses; markets decide prices. The US, most of Western Europe, your salon.",
+      emoji: '💇‍♀️',
+      tone: 'gold',
+    },
+    {
+      label: '02 · soft',
+      title: 'Democratic socialism',
+      body: "Capitalism with a strong safety net. Companies private; government taxes more and provides more. Norway, Denmark, Sweden.",
+      emoji: '🌿',
+      tone: 'sage',
+    },
+    {
+      label: '02 · hard',
+      title: 'State socialism',
+      body: "Government owns the major industries. Markets shrink, central planning grows.",
+      emoji: '🏛',
+      tone: 'terracotta',
+    },
+    {
+      label: '03 · theory',
+      title: 'Communism, the dream',
+      body: "No classes, no private property, no government — everyone shares based on need. No country has reached this.",
+      emoji: '📖',
+      tone: 'cream',
+    },
+    {
+      label: '03 · practice',
+      title: 'Communism, the reality',
+      body: "One ruling party controls everything. USSR, China under Mao, Cuba, North Korea.",
+      emoji: '🚩',
+      tone: 'ink',
+    },
+  ]}
+/>
 
 <Quiz
-  title="Test what you remember"
+  title="Want to test it?"
   questions={[
     {
       question: "Why aren't Norway, Denmark, and Sweden 'socialist' in the hard sense, even though they have generous safety nets?",
@@ -88,4 +166,10 @@ Almost every socialist and communist movement since then traces back to these tw
   ]}
 />
 
-<AskLaurence topic="economic systems" />
+<Coda>
+  That's the shape of it. Three takes on the same handful of questions. Next part: how the actual U.S. government is set up so no one of them gets all the power.
+</Coda>
+
+<div className="text-center my-8">
+  <AskLaurence topic="economic systems" />
+</div>
