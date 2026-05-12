@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: 42 34 24;
+  --gold: 184 153 104;
+  --gold-light: 212 188 147;
+  --limestone: 250 247 242;
+  --limestone-dark: 239 233 222;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: rgb(var(--limestone));
+  color: rgb(var(--ink));
+  font-feature-settings: 'kern','liga','calt';
+  -webkit-font-smoothing: antialiased;
+}
+
+.serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+.sans  { font-family: 'Inter', system-ui, sans-serif; }
+
+.prose-savs {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: rgb(var(--ink));
+}
+
+.prose-savs p { margin-bottom: 1.25rem; }
+.prose-savs strong { font-weight: 600; }
+.prose-savs em { font-style: italic; }
+.prose-savs h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.25rem;
+  line-height: 1.2;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: rgb(var(--ink));
+}
+.prose-savs h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: rgb(var(--ink));
+}
+
+.callout {
+  border-left: 3px solid rgb(var(--gold));
+  background: rgb(var(--limestone-dark));
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0.25rem;
+}
+
+.word-tip {
+  border-bottom: 1px dotted rgb(var(--gold));
+  cursor: help;
+}
