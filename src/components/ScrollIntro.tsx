@@ -61,10 +61,10 @@ export function ScrollIntro() {
       // 4 beats × ~120vh each = enough scroll for each to breathe
       style={{ height: '460vh' }}
     >
-      <div className="sticky top-0 h-screen overflow-hidden flex items-center">
+      <div className="sticky top-[68px] h-[calc(100vh-68px)] overflow-hidden flex items-center">
         <div className="max-w-wide mx-auto px-6 w-full grid md:grid-cols-2 gap-10 items-center">
           {/* Sticky illustration column */}
-          <div className="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-ink/85 order-2 md:order-1">
+          <div className="relative h-[34vh] md:h-[70vh] flex items-center justify-center text-ink/85 order-2 md:order-1">
             <motion.div style={{ opacity: op0, y: y0 }} className="absolute inset-0 flex items-center justify-center">
               <SalonChair size={Math.min(340, 80 * 4)} />
             </motion.div>
@@ -80,7 +80,7 @@ export function ScrollIntro() {
           </div>
 
           {/* Prose column */}
-          <div className="relative h-[60vh] md:h-[70vh] flex items-center order-1 md:order-2">
+          <div className="relative h-[34vh] md:h-[70vh] flex items-center order-1 md:order-2">
             {beats.map((b, i) => {
               const op = [op0, op1, op2, op3][i];
               return (
